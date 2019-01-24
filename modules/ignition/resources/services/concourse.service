@@ -1,0 +1,14 @@
+[Unit]
+Description=Concourse via Docker-Compose
+Type=oneshot
+
+[Service]
+ExecStart=/opt/bin/docker-compose up -d
+WorkingDirectory=/opt/concourse/
+
+[Install]
+WantedBy=multi-user.target
+
+[Unit]
+Requires=docker.service
+After=concoursekeygen.service

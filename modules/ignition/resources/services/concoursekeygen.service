@@ -1,0 +1,10 @@
+[Unit]
+Description=Generate KeyGen for Concourse
+Type=oneshot
+
+[Service]
+ExecStart=/opt/concourse/generate-keys.sh
+WorkingDirectory=/opt/concourse/
+
+[Install]
+WantedBy=multi-user.target

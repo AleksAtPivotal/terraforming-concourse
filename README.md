@@ -39,5 +39,11 @@ export TF_VAR_ssh_key_public=$(cat ~/.ssh/id_rsa.pub)
 Deploy the environment
 
 ```sh
-terraform init ; terraform plan
+terraform init ; terraform apply
+```
+
+Destroy the environment when done
+
+```sh
+terraform destroy
 ```
